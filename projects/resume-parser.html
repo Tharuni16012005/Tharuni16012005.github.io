@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Resume Parser — Dyapa Tharuni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-mark"><strong>DT</strong> // portfolio</a>
+    <div class="nav-links">
+      <a href="../index.html#projects">All projects</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="detail-header">
+    <a class="back-link" href="../index.html#projects">← Back to projects</a>
+    <span class="chip-label" style="display:block;margin-top:18px;">U2 — AI-RESUME-PARSER</span>
+    <h1>AI Resume Parser</h1>
+    <p class="summary">
+      A Flask web app that automatically extracts a candidate's name, contact
+      details, education, and skills from an uploaded resume — turning
+      unstructured documents into structured data recruiters can actually use.
+    </p>
+    <div class="link-row">
+      <a class="btn" href="https://github.com/Tharuni16012005/Automated-Resume-Parser" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+  </header>
+
+  <section class="detail-block">
+    <h2>Why I built it</h2>
+    <p>
+      Recruiters spend a lot of time manually reading through resumes before
+      they even get to evaluating a candidate. I built this to automate that
+      first pass — using NLP to pull out the key facts from a resume in
+      seconds, so screening takes less manual effort and candidates get
+      surfaced faster.
+    </p>
+  </section>
+
+  <section class="detail-block">
+    <h2>My role</h2>
+    <ul>
+      <li>Designed and developed the complete application, front to back</li>
+      <li>Built resume text extraction from uploaded PDF/DOCX files</li>
+      <li>Built the parser that identifies and extracts candidate information</li>
+      <li>Built the upload interface and results display</li>
+      <li>Tested and tuned the extraction logic across different resume formats</li>
+    </ul>
+  </section>
+
+  <section class="detail-block">
+    <h2>Stack</h2>
+    <div class="stack-list">
+      <span class="tag">Python</span>
+      <span class="tag">Flask</span>
+      <span class="tag">spaCy</span>
+      <span class="tag">pdfplumber / PyPDF2</span>
+      <span class="tag">python-docx</span>
+      <span class="tag">Regex</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">SQLite</span>
+    </div>
+  </section>
+
+  <section class="detail-block">
+    <h2>The hard part</h2>
+    <p>
+      Every resume is laid out differently, so extracting information reliably
+      was the real problem — there's no single fixed structure to parse
+      against. I combined NLP with regular expressions to handle this: spaCy's
+      entity recognition picked out names and skills, while regex handled
+      predictable patterns like phone numbers and email addresses. Adding a
+      text preprocessing step to clean the extracted content before parsing
+      made a noticeable difference in accuracy across formats.
+    </p>
+  </section>
+
+  <section class="detail-block">
+    <h2>In action</h2>
+    <div class="gallery">
+      <figure>
+        <img src="../assets/img/resume-parser/output.png" alt="Automated Resume Parser web interface showing extracted details: name, email, phone, skills, and education pulled from an uploaded resume">
+        <figcaption>Parsed output — name, contact info, skills, and education extracted from an uploaded resume</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/resume-parser/code.png" alt="VS Code showing the Flask app.py file for the resume parser, with routes for uploading and parsing resumes">
+        <figcaption>Flask backend — the upload route that saves the file and hands it off to the parser</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  Built &amp; wired by Dyapa Tharuni · Updated 2026
+</footer>
+
+</body>
+</html>

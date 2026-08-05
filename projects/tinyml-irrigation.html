@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TinyML Smart Irrigation System — Dyapa Tharuni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-mark"><strong>DT</strong> // portfolio</a>
+    <div class="nav-links">
+      <a href="../index.html#projects">All projects</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="detail-header">
+    <a class="back-link" href="../index.html#projects">← Back to projects</a>
+    <span class="chip-label" style="display:block;margin-top:18px;">U1 — TINYML-SI-ESP32</span>
+    <h1>TinyML-Based Smart Irrigation Decision System Using ESP32</h1>
+    <p class="summary">
+      Automatically monitors soil moisture and decides whether irrigation is
+      needed using a TinyML model running directly on the ESP32 microcontroller —
+      turning the water pump on or off with no cloud connectivity required.
+    </p>
+    <div class="link-row">
+      <a class="btn" href="https://github.com/Tharuni16012005/TinyML-Smart-Irrigation-System-ESP32" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+  </header>
+
+  <section class="detail-block">
+    <h2>Why I built it</h2>
+    <p>
+      Traditional irrigation relies on fixed schedules or manual checks rather
+      than actual soil conditions, which wastes water. I built this project to
+      show that TinyML can bring real decision-making to embedded systems —
+      using real-time soil data to water only when it's actually needed,
+      cutting waste and reducing manual work.
+    </p>
+  </section>
+
+  <section class="detail-block">
+    <h2>My role</h2>
+    <ul>
+      <li>Designed the complete embedded system architecture</li>
+      <li>Collected and prepared soil moisture data for model training</li>
+      <li>Trained a TinyML decision tree model and deployed it to the ESP32</li>
+      <li>Developed the embedded firmware to read sensor data and control the pump</li>
+      <li>Integrated and tested all hardware components</li>
+    </ul>
+  </section>
+
+  <section class="detail-block">
+    <h2>Stack</h2>
+    <div class="stack-list">
+      <span class="tag">C++</span>
+      <span class="tag">Python</span>
+      <span class="tag">ESP32</span>
+      <span class="tag">EloquentTinyML</span>
+      <span class="tag">Arduino IDE</span>
+      <span class="tag">Google Colab</span>
+      <span class="tag">Decision Tree</span>
+      <span class="tag">Soil moisture sensor</span>
+      <span class="tag">Relay + pump</span>
+      <span class="tag">LED / buzzer</span>
+    </div>
+  </section>
+
+  <section class="detail-block">
+    <h2>The hard part</h2>
+    <p>
+      Deploying a machine learning model on a resource-constrained
+      microcontroller was the core challenge — the ESP32 doesn't have the
+      memory or processing headroom of a computer, so a lightweight decision
+      tree was the right fit rather than a heavier model. I trained it in
+      Python on Google Colab, converted it to TinyML-compatible C++, and
+      wired it into the ESP32 firmware.
+    </p>
+    <p>
+      The second challenge was picking a soil moisture threshold that actually
+      matched reality — validating that the model's "dry" and "wet"
+      predictions lined up with what the sensor was really reading. That took
+      repeated testing and calibration before the pump only triggered when
+      irrigation was genuinely needed.
+    </p>
+  </section>
+
+  <section class="detail-block">
+    <h2>Build photos</h2>
+    <div class="gallery">
+      <figure>
+        <img src="../assets/img/irrigation/setup.png" alt="Assembled TinyML smart irrigation prototype on a labeled board, showing the ESP32, soil moisture sensor, LED, buzzer, and pump/motor wired together">
+        <figcaption>Batch-01 prototype — ESP32, soil moisture sensor, pump, LED, and buzzer wired and running</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/irrigation/circuit.png" alt="Circuit diagram in Cirkit showing the ESP32 connected to a soil moisture sensor, LED, buzzer, and pump">
+        <figcaption>Circuit design in Cirkit, mapping sensor and actuator connections to the ESP32</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/img/irrigation/serial-output.jpg" alt="Arduino IDE serial monitor showing live moisture readings and DRY classification output from the TinyML decision tree model">
+        <figcaption>Serial monitor output — live moisture readings classified as DRY by the on-device model</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  Built &amp; wired by Dyapa Tharuni · Updated 2026
+</footer>
+
+</body>
+</html>
