@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Identity Kit — Dyapa Tharuni</title>
+<meta name="description" content="Visual identity kit for Dyapa Tharuni's portfolio: fonts, palette, logo, and style note.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .swatch-row { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:10px; }
+  .swatch { border:1px solid var(--hairline); border-radius:4px; overflow:hidden; background:var(--pcb-panel); }
+  .swatch-color { height:64px; }
+  .swatch-meta { padding:10px 12px; font-family:var(--mono); font-size:12px; }
+  .swatch-meta .name { color:var(--silk-dim); letter-spacing:.06em; text-transform:uppercase; font-size:10.5px; }
+  .swatch-meta .hex { color:var(--silk); margin-top:3px; }
+  .type-sample { border:1px solid var(--hairline); border-radius:5px; padding:22px 24px; background:var(--pcb-panel); margin-bottom:14px; }
+  .type-sample .label { font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--copper); text-transform:uppercase; margin-bottom:10px; }
+  .favicon-preview { display:flex; align-items:center; gap:14px; border:1px solid var(--hairline); border-radius:5px; padding:18px 20px; background:var(--pcb-panel); }
+  .favicon-mark { width:40px; height:40px; border-radius:6px; background:var(--pcb-dark); border:1px solid var(--copper); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:600; color:var(--copper-bright); }
+  .style-note { border-left:2px solid var(--copper); padding:4px 0 4px 18px; color:var(--silk-dim); font-size:15px; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html#top" class="nav-mark"><strong>DT</strong> // portfolio</a>
+    <div class="nav-links">
+      <a href="index.html#profile">Profile</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="board" id="top">
+  <div class="trace-rail" aria-hidden="true"></div>
+
+  <header class="hero pin" data-pin="PIN 00 — IDENTITY KIT">
+    <div class="wrap">
+      <span class="pin-marker" aria-hidden="true"></span>
+      <span class="eyebrow">Week 3 · Decide Once</span>
+      <h1>Identity Kit</h1>
+      <p class="lede">
+        The fonts, palette, logo mark, and style note behind this portfolio —
+        decided once here, then reused on every page so nothing looks
+        assembled from scratch each time.
+      </p>
+    </div>
+  </header>
+
+  <section class="pin" data-pin="PIN 01 — TYPE">
+    <div class="wrap">
+      <span class="pin-marker" aria-hidden="true"></span>
+      <div class="section-head">
+        <span class="eyebrow">Type</span>
+        <h2>Two fonts, one family each</h2>
+      </div>
+
+      <div class="type-sample">
+        <div class="label">Heading &amp; labels — IBM Plex Mono</div>
+        <h2 style="font-size:28px;">TinyML-Based Smart Irrigation Decision System</h2>
+      </div>
+      <div class="type-sample">
+        <div class="label">Body — IBM Plex Sans</div>
+        <p style="margin:0; max-width:60ch;">
+          I build systems that make decisions at the edge — soil sensors that
+          know when to irrigate, microcontrollers that run machine learning
+          without a cloud connection.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pin" data-pin="PIN 02 — PALETTE">
+    <div class="wrap">
+      <span class="pin-marker" aria-hidden="true"></span>
+      <div class="section-head">
+        <span class="eyebrow">Palette</span>
+        <h2>Near-black, near-white, two accents</h2>
+      </div>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#0e1f16;"></div>
+          <div class="swatch-meta"><div class="name">Background</div><div class="hex">#0e1f16</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#e9e4d6;"></div>
+          <div class="swatch-meta"><div class="name">Text (silk)</div><div class="hex">#e9e4d6</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#c9873f;"></div>
+          <div class="swatch-meta"><div class="name">Accent — copper</div><div class="hex">#c9873f</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#6fa9b8;"></div>
+          <div class="swatch-meta"><div class="name">Accent — signal</div><div class="hex">#6fa9b8</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pin" data-pin="PIN 03 — MARK">
+    <div class="wrap">
+      <span class="pin-marker" aria-hidden="true"></span>
+      <div class="section-head">
+        <span class="eyebrow">Logo / favicon</span>
+        <h2>DT, set in mono</h2>
+      </div>
+      <div class="favicon-preview">
+        <div class="favicon-mark">DT</div>
+        <p style="margin:0; color:var(--silk-dim); font-size:14px;">
+          Initials in IBM Plex Mono, copper on background-dark — matches the
+          nav mark already used site-wide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pin" data-pin="PIN 04 — STYLE NOTE">
+    <div class="wrap">
+      <span class="pin-marker" aria-hidden="true"></span>
+      <div class="section-head">
+        <span class="eyebrow">Style note</span>
+        <h2>The mood, in two lines</h2>
+      </div>
+      <p class="style-note">
+        A dark PCB datasheet: quiet, technical, exact — like a spec sheet for
+        a board that already works. Every accent color and mono label exists
+        to make the work look documented, never decorated.
+      </p>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  Built &amp; wired by Dyapa Tharuni · Identity kit · Updated 2026
+</footer>
+
+</body>
+</html>
