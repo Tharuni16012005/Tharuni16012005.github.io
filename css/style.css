@@ -453,3 +453,78 @@ section + section { border-top: 1px solid var(--hairline); }
   gap: 12px;
   margin-top: 6px;
 }
+/* ============================================= */
+/* ADD to css/style.css — styles for the new contact form */
+/* Adjust the color values below if they don't exactly match */
+/* your existing --bg / --accent / --card-bg variables      */
+/* ============================================= */
+
+.contact-form-block {
+  margin-top: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 24px;
+  border-radius: 4px;
+  max-width: 480px;
+}
+
+.contact-form-block > .k {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  opacity: 0.55;
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  padding: 10px 12px;
+  color: inherit;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: currentColor;
+}
+
+.contact-form-block button.btn {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+#form-status {
+  margin-top: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+}
+
+#form-status.status-ok {
+  color: #7fd88f;
+}
+
+#form-status.status-err {
+  color: #e0705a;
+}
