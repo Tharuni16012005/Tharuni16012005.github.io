@@ -95,6 +95,18 @@
         <img src="../assets/img/resume-parser/code.png" alt="VS Code showing the Flask app.py file for the resume parser, with routes for uploading and parsing resumes">
         <figcaption>Flask backend — the upload route that saves the file and hands it off to the parser</figcaption>
       </figure>
+     <figure>
+          <img src="../assets/img/resume-parser/format-standard.png" alt="Resume parser output for a standard single-column resume, correctly extracting name, email, phone, skills, and education">
+          <figcaption>Standard format — all fields extracted correctly</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img/resume-parser/format-scanned.png" alt="Resume parser output for a scanned resume, correctly extracting name, email, phone, skills, and education">
+          <figcaption>Scanned resume — all fields extracted correctly</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img/resume-parser/format-twocolumn.png" alt="Resume parser output for a two-column resume, showing the name field incorrectly including a section header">
+          <figcaption>Two-column layout — parser pulled a section header into the name field, a real edge case to fix next</figcaption>
+        </figure>      
      </div>
   </section>
 </div>
